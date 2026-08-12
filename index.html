@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=0.9">
   <title>Loughrea Badminton Club</title>
-  <link rel="icon" type="image/x-icon" href="imgs/fav.png">
+  <link rel="icon" type="image/x-icon" href="fav.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@1,500;1,600&display=swap" rel="stylesheet">
@@ -205,7 +205,6 @@
       overflow: hidden;
     }
 
-    /* Large LBC watermark in the middle */
     .lbc-watermark {
       position: absolute;
       top: 50%;
@@ -472,7 +471,7 @@
       filter: drop-shadow(0 0 40px rgba(0, 102, 179, 0.18));
     }
 
-    /* ===== LATEST ON INSTAGRAM (inside About) ===== */
+    /* ===== LATEST ON INSTAGRAM ===== */
     .instagram-block {
       max-width: 1100px;
       margin: 0 auto;
@@ -610,13 +609,6 @@
 
     .ig-post-time {
       font-size: 11px;
-      color: var(--muted);
-      flex-shrink: 0;
-    }
-
-    .ig-icon {
-      width: 14px;
-      height: 14px;
       color: var(--muted);
       flex-shrink: 0;
     }
@@ -1172,14 +1164,6 @@
       letter-spacing: 0.5px;
     }
 
-    .site-footer a {
-      color: var(--muted);
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-
-    .site-footer a:hover { color: var(--accent); }
-
     .footer-center {
       display: flex;
       align-items: center;
@@ -1194,60 +1178,24 @@
 
     /* ===== RESPONSIVE ===== */
     @media (max-width: 1100px) {
-      .hero {
-        grid-template-columns: 1fr;
-        gap: 40px;
-      }
-      .graphic-wrap {
-        height: 520px;
-        order: -1;
-      }
-      .logo-hero {
-        width: 520px;
-        height: 520px;
-      }
-      .logo-hero img {
-        max-width: 480px;
-      }
-      .lbc-watermark {
-        font-size: 160px;
-        opacity: 0.06;
-      }
-      .about-layout {
-        grid-template-columns: 1fr;
-        gap: 40px;
-      }
+      .hero { grid-template-columns: 1fr; gap: 40px; }
+      .graphic-wrap { height: 520px; order: -1; }
+      .logo-hero { width: 520px; height: 520px; }
+      .logo-hero img { max-width: 480px; }
+      .lbc-watermark { font-size: 160px; opacity: 0.06; }
+      .about-layout { grid-template-columns: 1fr; gap: 40px; }
       .about-image-wrap { order: -1; }
-      .instagram-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
+      .instagram-grid { grid-template-columns: repeat(2, 1fr); }
       section { padding: 60px 40px; }
-      .timeline-item {
-        grid-template-columns: 110px 1fr;
-        gap: 28px;
-      }
-      .capabilities-header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      .capabilities-desc {
-        text-align: left;
-        max-width: 100%;
-      }
-      .membership-grid {
-        grid-template-columns: 1fr;
-      }
-      .contact-grid {
-        grid-template-columns: 1fr;
-        gap: 50px;
-      }
+      .timeline-item { grid-template-columns: 110px 1fr; gap: 28px; }
+      .capabilities-header { flex-direction: column; align-items: flex-start; }
+      .capabilities-desc { text-align: left; max-width: 100%; }
+      .membership-grid { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; gap: 50px; }
     }
 
     @media (max-width: 900px) {
-      .skills-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 14px;
-      }
+      .skills-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
     }
 
     @media (max-width: 768px) {
@@ -1260,70 +1208,24 @@
         border-bottom: 1px solid var(--border);
         padding: 20px;
       }
-      .main {
-        margin-left: 0;
-        width: 100%;
-      }
+      .main { margin-left: 0; width: 100%; }
       .nav, .social, .status { display: none; }
       .headline { font-size: 34px; }
-      section {
-        padding: 50px 24px;
-        min-height: auto;
-      }
+      section { padding: 50px 24px; min-height: auto; }
       .quote { font-size: 24px; }
-      .instagram-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 12px;
-      }
-      .timeline-item {
-        grid-template-columns: 1fr;
-        gap: 12px;
-      }
-      .timeline-left {
-        text-align: left;
-        display: flex;
-        gap: 16px;
-        align-items: center;
-      }
-      .timeline-content {
-        border-left: none;
-        padding-left: 0;
-      }
-      .timeline-icon {
-        position: static;
-        margin-bottom: 12px;
-      }
-      .skills-grid {
-        grid-template-columns: 1fr;
-        gap: 14px;
-      }
-      .form-row {
-        grid-template-columns: 1fr;
-      }
-      .recognition {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 12px;
-      }
-      .site-footer {
-        flex-direction: column;
-        gap: 12px;
-        text-align: center;
-      }
-      .graphic-wrap {
-        height: 360px;
-      }
-      .logo-hero {
-        width: 320px;
-        height: 320px;
-      }
-      .logo-hero img {
-        max-width: 300px;
-      }
-      .lbc-watermark {
-        font-size: 110px;
-        letter-spacing: -4px;
-      }
+      .instagram-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+      .timeline-item { grid-template-columns: 1fr; gap: 12px; }
+      .timeline-left { text-align: left; display: flex; gap: 16px; align-items: center; }
+      .timeline-content { border-left: none; padding-left: 0; }
+      .timeline-icon { position: static; margin-bottom: 12px; }
+      .skills-grid { grid-template-columns: 1fr; gap: 14px; }
+      .form-row { grid-template-columns: 1fr; }
+      .recognition { flex-direction: column; align-items: flex-start; gap: 12px; }
+      .site-footer { flex-direction: column; gap: 12px; text-align: center; }
+      .graphic-wrap { height: 360px; }
+      .logo-hero { width: 320px; height: 320px; }
+      .logo-hero img { max-width: 300px; }
+      .lbc-watermark { font-size: 110px; letter-spacing: -4px; }
     }
   </style>
 </head>
@@ -1332,7 +1234,7 @@
   <!-- SIDEBAR -->
   <aside class="sidebar">
     <div class="logo">
-      <img src="imgs/logo1.png" alt="Loughrea Badminton Club">
+      <img src="logo1.png" alt="Loughrea Badminton Club">
     </div>
 
     <div class="profile-card">
@@ -1378,9 +1280,7 @@
 
     <!-- 01 HOME -->
     <section id="home">
-      <!-- Large LBC in the middle to fill the black space -->
       <div class="lbc-watermark">LBC</div>
-
       <div class="section-label">01  HOME</div>
 
       <div class="hero">
@@ -1409,12 +1309,10 @@
 
         <div class="graphic-wrap">
           <div class="graphic-label">01 — LOUGHREA</div>
-
           <div class="logo-hero">
             <div class="logo-glow"></div>
-            <img src="imgs/logo1.png" alt="Loughrea Badminton Club logo">
+            <img src="logo1.png" alt="Loughrea Badminton Club logo">
           </div>
-
           <div class="graphic-caption">Courts / Community / Competition</div>
         </div>
       </div>
@@ -1427,7 +1325,7 @@
       </div>
     </section>
 
-    <!-- 02 ABOUT (+ Instagram feed) -->
+    <!-- 02 ABOUT -->
     <section id="about">
       <div class="section-label">02  ABOUT</div>
 
@@ -1446,15 +1344,14 @@
         </div>
 
         <div class="about-image-wrap">
-          <img src="imgs/badminton-player.png" alt="Badminton player in action">
+          <img src="badminton-player.png" alt="Badminton player in action">
         </div>
       </div>
 
-      <!-- Latest on Instagram (inside About) -->
       <div class="instagram-block">
         <div class="instagram-header">
           <div class="instagram-header-left">
-            <img src="imgs/logo1.png" alt="Loughrea Badminton Club">
+            <img src="logo1.png" alt="Loughrea Badminton Club">
             <div>
               <div class="instagram-title">Latest on Instagram</div>
               <div class="instagram-posts-count">@loughrea_badminton_club</div>
@@ -1468,12 +1365,12 @@
         <div class="instagram-grid">
           <a href="https://www.instagram.com/loughrea_badminton_club/" target="_blank" rel="noopener" class="ig-post">
             <div class="ig-post-img">
-              <img src="imgs/insta1.png" alt="Club post">
+              <img src="insta1.png" alt="Club post">
               <span class="carousel-badge">1/3</span>
             </div>
             <div class="ig-post-meta">
               <div class="ig-post-user">
-                <img src="imgs/logo1.png" alt="">
+                <img src="logo1.png" alt="">
                 <span>loughrea_badminton...</span>
               </div>
               <span class="ig-post-time">2 weeks ago</span>
@@ -1482,11 +1379,11 @@
 
           <a href="https://www.instagram.com/loughrea_badminton_club/" target="_blank" rel="noopener" class="ig-post">
             <div class="ig-post-img">
-              <img src="imgs/insta2.png" alt="Club post">
+              <img src="insta2.png" alt="Club post">
             </div>
             <div class="ig-post-meta">
               <div class="ig-post-user">
-                <img src="imgs/logo1.png" alt="">
+                <img src="logo1.png" alt="">
                 <span>loughrea_badminton...</span>
               </div>
               <span class="ig-post-time">3 weeks ago</span>
@@ -1495,12 +1392,12 @@
 
           <a href="https://www.instagram.com/loughrea_badminton_club/" target="_blank" rel="noopener" class="ig-post">
             <div class="ig-post-img">
-              <img src="imgs/insta3.png" alt="Club post">
+              <img src="insta3.png" alt="Club post">
               <span class="carousel-badge">1/2</span>
             </div>
             <div class="ig-post-meta">
               <div class="ig-post-user">
-                <img src="imgs/logo1.png" alt="">
+                <img src="logo1.png" alt="">
                 <span>loughrea_badminton...</span>
               </div>
               <span class="ig-post-time">1 month ago</span>
@@ -1509,11 +1406,11 @@
 
           <a href="https://www.instagram.com/loughrea_badminton_club/" target="_blank" rel="noopener" class="ig-post">
             <div class="ig-post-img">
-              <img src="imgs/insta4.png" alt="Club post">
+              <img src="insta4.png" alt="Club post">
             </div>
             <div class="ig-post-meta">
               <div class="ig-post-user">
-                <img src="imgs/logo1.png" alt="">
+                <img src="logo1.png" alt="">
                 <span>loughrea_badminton...</span>
               </div>
               <span class="ig-post-time">1 month ago</span>
@@ -1713,123 +1610,114 @@
       </div>
 
       <div class="membership-form-wrap">
-  <h3 class="form-title">Membership application</h3>
-  <p class="form-subtitle">Fill in your details and we’ll be in touch with payment and start date information. Memberships open from 10 September.</p>
+        <h3 class="form-title">Membership application</h3>
+        <p class="form-subtitle">Fill in your details and we’ll be in touch with payment and start date information. Memberships open from 10 September.</p>
 
-  <form id="membershipForm">
-    <div class="form-row">
-      <div class="form-group">
-        <label for="firstName">First name</label>
-        <input type="text" id="firstName" name="firstName" required placeholder="Your first name">
+        <form id="membershipForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="firstName">First name</label>
+              <input type="text" id="firstName" name="firstName" required placeholder="Your first name">
+            </div>
+            <div class="form-group">
+              <label for="lastName">Last name</label>
+              <input type="text" id="lastName" name="lastName" required placeholder="Your last name">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required placeholder="you@example.com">
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" name="phone" placeholder="+353 ...">
+            </div>
+            <div class="form-group">
+              <label for="membershipType">Membership type</label>
+              <select id="membershipType" name="membershipType" required>
+                <option value="">Select...</option>
+                <option value="Adult — €195 / year">Adult — €195 / year</option>
+                <option value="University / College Student — €175 / year (proof required)">University / College Student — €175 / year (proof required)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="experience">Playing experience (optional)</label>
+            <textarea id="experience" name="experience" rows="3" placeholder="Beginner, intermediate, competitive, etc."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary" id="submitBtn" style="margin-top: 8px;">
+            Submit application
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+
+          <p class="form-note" id="formMessage" style="display:none; margin-top:16px;"></p>
+
+          <p class="form-note">
+            After submitting we’ll email you bank transfer details or card payment options. Student members must provide valid university/college proof. Memberships start from 10 September.
+          </p>
+        </form>
+
+        <div class="payment-box">
+          <div class="payment-title">Payment options</div>
+          <div class="payment-methods">
+            <span class="pay-method">Bank transfer</span>
+            <span class="pay-method">Card (online link)</span>
+            <span class="pay-method">Cash at session</span>
+          </div>
+          <p class="payment-info">
+            Once your application is reviewed you’ll receive secure payment instructions. Places are confirmed after payment is received. For queries contact the club secretary.
+          </p>
+        </div>
       </div>
-      <div class="form-group">
-        <label for="lastName">Last name</label>
-        <input type="text" id="lastName" name="lastName" required placeholder="Your last name">
-      </div>
-    </div>
 
-    <div class="form-group">
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" required placeholder="you@example.com">
-    </div>
+      <script>
+        const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbz6I-QBoFEVqDRfgv19nvqFgB52RZrRiGOdDDhRhZhoWkluBOjIIIi4bxkU9cyo91NSOw/exec";
 
-    <div class="form-row">
-      <div class="form-group">
-        <label for="phone">Phone</label>
-        <input type="tel" id="phone" name="phone" placeholder="+353 ...">
-      </div>
-      <div class="form-group">
-        <label for="membershipType">Membership type</label>
-        <select id="membershipType" name="membershipType" required>
-          <option value="">Select...</option>
-          <option value="Adult — €195 / year">Adult — €195 / year</option>
-          <option value="University / College Student — €175 / year (proof required)">University / College Student — €175 / year (proof required)</option>
-        </select>
-      </div>
-    </div>
+        document.getElementById("membershipForm").addEventListener("submit", function(e) {
+          e.preventDefault();
 
-    <div class="form-group">
-      <label for="experience">Playing experience (optional)</label>
-      <textarea id="experience" name="experience" rows="3" placeholder="Beginner, intermediate, competitive, etc."></textarea>
-    </div>
+          const form = this;
+          const btn  = document.getElementById("submitBtn");
+          const msg  = document.getElementById("formMessage");
 
-    <button type="submit" class="btn btn-primary" id="submitBtn" style="margin-top: 8px;">
-      Submit application
-      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-    </button>
+          msg.style.display = "none";
+          msg.textContent = "";
 
-    <p class="form-note" id="formMessage" style="display:none; margin-top:16px;"></p>
+          btn.disabled = true;
+          btn.innerHTML = "Sending...";
 
-    <p class="form-note">
-      After submitting we’ll email you bank transfer details or card payment options. Student members must provide valid university/college proof. Memberships start from 10 September.
-    </p>
-  </form>
+          const formData = new FormData(form);
 
-  <div class="payment-box">
-    <div class="payment-title">Payment options</div>
-    <div class="payment-methods">
-      <span class="pay-method">Bank transfer</span>
-      <span class="pay-method">Card (online link)</span>
-      <span class="pay-method">Cash at session</span>
-    </div>
-    <p class="payment-info">
-      Once your application is reviewed you’ll receive secure payment instructions. Places are confirmed after payment is received. For queries contact the club secretary.
-    </p>
-  </div>
-</div>
-
-<script>
-  // Your deployed Web App URL
-  const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbz6I-QBoFEVqDRfgv19nvqFgB52RZrRiGOdDDhRhZhoWkluBOjIIIi4bxkU9cyo91NSOw/exec";
-
-  document.getElementById("membershipForm").addEventListener("submit", function(e) {
-    e.preventDefault();
-
-    const form = this;
-    const btn  = document.getElementById("submitBtn");
-    const msg  = document.getElementById("formMessage");
-
-    // Reset message
-    msg.style.display = "none";
-    msg.textContent = "";
-
-    // Disable button
-    btn.disabled = true;
-    btn.innerHTML = "Sending...";
-
-    const formData = new FormData(form);
-
-    // Send to Google Apps Script
-    fetch(SCRIPT_URL, {
-      method: "POST",
-      body: formData
-    })
-    .then(function(response) {
-      // Apps Script often returns a redirect / opaque response.
-      // If we reach here without a network error, treat it as success.
-      return response.text().catch(function() { return ""; });
-    })
-    .then(function() {
-      // Success
-      msg.style.display = "block";
-      msg.style.color = "#0066B3";
-      msg.textContent = "Thank you! Your application has been received. We’ll be in touch soon.";
-      form.reset();
-    })
-    .catch(function(error) {
-      // Real network / CORS failure
-      console.error(error);
-      msg.style.display = "block";
-      msg.style.color = "#C41E3A";
-      msg.textContent = "Sorry, there was a problem. Please try again or email us directly at loughreabadmclub@gmail.com";
-    })
-    .finally(function() {
-      // Re-enable button
-      btn.disabled = false;
-      btn.innerHTML = 'Submit application <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>';
-    });
-  });
-</script>
+          fetch(SCRIPT_URL, {
+            method: "POST",
+            body: formData
+          })
+          .then(function(response) {
+            return response.text().catch(function() { return ""; });
+          })
+          .then(function() {
+            msg.style.display = "block";
+            msg.style.color = "#0066B3";
+            msg.textContent = "Thank you! Your application has been received. We’ll be in touch soon.";
+            form.reset();
+          })
+          .catch(function(error) {
+            console.error(error);
+            msg.style.display = "block";
+            msg.style.color = "#C41E3A";
+            msg.textContent = "Sorry, there was a problem. Please try again or email us directly at loughreabadmclub@gmail.com";
+          })
+          .finally(function() {
+            btn.disabled = false;
+            btn.innerHTML = 'Submit application <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>';
+          });
+        });
+      </script>
     </section>
 
     <!-- 06 CONTACT -->
