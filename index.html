@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@1,500;1,600&display=swap" rel="stylesheet">
   <style>
-   :root {
+    :root {
       --bg: #0a0a0a;
       --sidebar: #0f0f0f;
       --text: #e8e8e8;
@@ -21,17 +21,16 @@
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    html, 
+    html { scroll-behavior: smooth; }
+
     body {
-    width: 100%;
-    overflow-x: hidden;
-    -webkit-text-size-adjust: 100%;
-  }
-  
-  img {
-    max-width: 100%;
-    height: auto;
-  }
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      overflow-x: hidden;
+    }
 
     /* ========== SIDEBAR ========== */
     .sidebar {
@@ -1177,144 +1176,57 @@
       color: var(--accent);
     }
 
-   /* ===== RESPONSIVE ===== */
-@media (max-width: 1100px) {
-  .hero {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-  .graphic-wrap {
-    height: 340px;
-    order: -1;
-  }
-  .logo-hero {
-    width: 280px;
-    height: 280px;
-  }
-  .logo-hero img {
-    max-width: 260px;
-  }
-  .lbc-watermark {
-    font-size: 120px;
-    opacity: 0.06;
-  }
-  .about-layout {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-  .about-image-wrap { order: -1; }
-  .instagram-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  section { padding: 60px 40px; }
-  .timeline-item {
-    grid-template-columns: 110px 1fr;
-    gap: 28px;
-  }
-  .capabilities-header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .capabilities-desc {
-    text-align: left;
-    max-width: 100%;
-  }
-  .membership-grid {
-    grid-template-columns: 1fr;
-  }
-  .membership-form-row {
-    flex-direction: column;
-  }
-  .contact-grid {
-    grid-template-columns: 1fr;
-    gap: 50px;
-  }
-}
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1100px) {
+      .hero { grid-template-columns: 1fr; gap: 40px; }
+      .graphic-wrap { height: 520px; order: -1; }
+      .logo-hero { width: 520px; height: 520px; }
+      .logo-hero img { max-width: 480px; }
+      .lbc-watermark { font-size: 160px; opacity: 0.06; }
+      .about-layout { grid-template-columns: 1fr; gap: 40px; }
+      .about-image-wrap { order: -1; }
+      .instagram-grid { grid-template-columns: repeat(2, 1fr); }
+      section { padding: 60px 40px; }
+      .timeline-item { grid-template-columns: 110px 1fr; gap: 28px; }
+      .capabilities-header { flex-direction: column; align-items: flex-start; }
+      .capabilities-desc { text-align: left; max-width: 100%; }
+      .membership-grid { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; gap: 50px; }
+    }
 
-@media (max-width: 900px) {
-  .skills-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 14px;
-  }
-}
+    @media (max-width: 900px) {
+      .skills-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+    }
 
-@media (max-width: 768px) {
-  .sidebar {
-    width: 100%;
-    height: auto;
-    min-height: auto;
-    position: relative;
-    border-right: none;
-    border-bottom: 1px solid var(--border);
-    padding: 20px;
-  }
-  .main {
-    margin-left: 0;
-    width: 100%;
-  }
-  .nav, .social, .status { display: none; }
-  .headline { font-size: 32px; }
-  section {
-    padding: 40px 20px;
-    min-height: auto;
-  }
-  .quote { font-size: 22px; }
-  .instagram-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
-  }
-  .timeline-item {
-    grid-template-columns: 1fr;
-    gap: 12px;
-  }
-  .timeline-left {
-    text-align: left;
-    display: flex;
-    gap: 16px;
-    align-items: center;
-  }
-  .timeline-content {
-    border-left: none;
-    padding-left: 0;
-  }
-  .timeline-icon {
-    position: static;
-    margin-bottom: 12px;
-  }
-  .skills-grid {
-    grid-template-columns: 1fr;
-    gap: 14px;
-  }
-  .form-row {
-    grid-template-columns: 1fr;
-  }
-  .recognition {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
-  }
-  .site-footer {
-    flex-direction: column;
-    gap: 12px;
-    text-align: center;
-  }
-
-  /* Critical mobile logo fix */
-  .graphic-wrap {
-    height: 260px;
-  }
-  .logo-hero {
-    width: 220px;
-    height: 220px;
-  }
-  .logo-hero img {
-    max-width: 200px;
-  }
-  .lbc-watermark {
-    font-size: 90px;
-    letter-spacing: -4px;
-  }
-}
+    @media (max-width: 768px) {
+      .sidebar {
+        width: 100%;
+        height: auto;
+        min-height: auto;
+        position: relative;
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+        padding: 20px;
+      }
+      .main { margin-left: 0; width: 100%; }
+      .nav, .social, .status { display: none; }
+      .headline { font-size: 34px; }
+      section { padding: 50px 24px; min-height: auto; }
+      .quote { font-size: 24px; }
+      .instagram-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+      .timeline-item { grid-template-columns: 1fr; gap: 12px; }
+      .timeline-left { text-align: left; display: flex; gap: 16px; align-items: center; }
+      .timeline-content { border-left: none; padding-left: 0; }
+      .timeline-icon { position: static; margin-bottom: 12px; }
+      .skills-grid { grid-template-columns: 1fr; gap: 14px; }
+      .form-row { grid-template-columns: 1fr; }
+      .recognition { flex-direction: column; align-items: flex-start; gap: 12px; }
+      .site-footer { flex-direction: column; gap: 12px; text-align: center; }
+      .graphic-wrap { height: 360px; }
+      .logo-hero { width: 320px; height: 320px; }
+      .logo-hero img { max-width: 300px; }
+      .lbc-watermark { font-size: 110px; letter-spacing: -4px; }
+    }
 
 
     /* Membership form + logos side by side */
