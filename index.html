@@ -1489,6 +1489,45 @@
   opacity: 1;
 }
 
+.membership-logos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding-top: 12px;
+  flex-shrink: 0;
+}
+
+.partner-label {
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+
+.logo-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.partner-logo {
+  max-width: 140px;
+  height: auto;
+  max-height: 50px;
+  object-fit: contain;
+  filter: brightness(0.95);
+  opacity: 0.9;
+  transition: opacity 0.2s;
+}
+
+.partner-logo:hover {
+  opacity: 1;
+}
+
 
   </style>
 </head>
@@ -2004,10 +2043,19 @@
     </div>
 
     <!-- Logos beside the form -->
+    <!-- Logos beside the form -->
     <div class="membership-logos">
-      <div class="partner-label">Equipment partners</div>
-      <img src="yonex.webp" alt="Yonex" class="partner-logo yonex-logo">
-      <img src="victors.png" alt="Victors" class="partner-logo bird-logo">
+    <div class="partner-label">Equipment Partners</div>
+    <div class="logo-row">
+        <img src="yonex.webp" alt="Yonex" class="partner-logo">
+        <img src="victors.png" alt="Victor" class="partner-logo">
+    </div>
+
+    <div class="partner-label" style="margin-top: 28px;">Sponsors</div>
+    <div class="logo-row">
+        <img src="credit-union-logo.png" alt="Credit Union" class="partner-logo">
+        <img src="LG.png" alt="Gymnastics" class="partner-logo">
+    </div>
     </div>
   </div>
 
