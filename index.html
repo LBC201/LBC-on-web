@@ -1386,95 +1386,85 @@
     }
 
 
-        /* ========== MOBILE LAYOUT FIX ========== */
-    @media (max-width: 900px) {
+    /* Completely remove sidebar on phones */
+@media (max-width: 900px) {
 
-    /* Turn sidebar into a simple top bar */
-    .sidebar {
-        position: relative !important;
-        width: 100% !important;
-        min-height: auto !important;
-        height: auto !important;
-        border-right: none !important;
-        border-bottom: 1px solid var(--border);
-        padding: 16px 20px !important;
-        flex-direction: row !important;
-        align-items: center !important;
-        justify-content: space-between !important;
-    }
+  .sidebar {
+    display: none !important;
+  }
 
-    .logo {
-        margin-bottom: 0 !important;
-        padding: 0 !important;
-    }
+  .main {
+    margin-left: 0 !important;
+    width: 100% !important;
+  }
 
-    .logo img {
-        width: 70px !important;
-    }
+  section {
+    padding: 40px 20px !important;
+    min-height: auto !important;
+  }
 
-    .profile-card,
-    .nav,
-    .social,
-    .status {
-        display: none !important;
-    }
+  /* Hero layout for mobile */
+  .hero {
+    grid-template-columns: 1fr !important;
+    gap: 30px !important;
+    text-align: center;
+  }
 
-    /* Main content takes full width */
-    .main {
-        margin-left: 0 !important;
-        width: 100% !important;
-    }
+  .graphic-wrap {
+    height: 260px !important;
+    order: -1;
+  }
 
-    section {
-        padding: 40px 20px !important;
-        min-height: auto !important;
-    }
+  .logo-hero {
+    width: 220px !important;
+    height: 220px !important;
+    margin: 0 auto;
+  }
 
-    /* Hero becomes single column */
-    .hero {
-        grid-template-columns: 1fr !important;
-        gap: 30px !important;
-        text-align: center;
-    }
+  .logo-hero img {
+    max-width: 200px !important;
+  }
 
-    .graphic-wrap {
-        height: 260px !important;
-        order: -1;
-    }
+  .lbc-watermark {
+    font-size: 90px !important;
+    letter-spacing: -4px !important;
+  }
 
-    .logo-hero {
-        width: 220px !important;
-        height: 220px !important;
-        margin: 0 auto;
-    }
+  .headline {
+    font-size: 34px !important;
+  }
 
-    .logo-hero img {
-        max-width: 200px !important;
-    }
+  .desc {
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-    .lbc-watermark {
-        font-size: 90px !important;
-        letter-spacing: -4px !important;
-    }
+  .actions {
+    justify-content: center;
+  }
 
-    .headline {
-        font-size: 34px !important;
-    }
+  .graphic-label,
+  .graphic-caption {
+    display: none;
+  }
 
-    .desc {
-        margin-left: auto;
-        margin-right: auto;
-    }
+  /* Other sections */
+  .about-layout,
+  .membership-grid,
+  .membership-form-row,
+  .contact-grid {
+    grid-template-columns: 1fr !important;
+    flex-direction: column !important;
+  }
 
-    .actions {
-        justify-content: center;
-    }
+  .instagram-grid {
+    grid-template-columns: 1fr 1fr !important;
+  }
 
-    .graphic-label,
-    .graphic-caption {
-        display: none;
-    }
-    }
+  .form-row {
+    grid-template-columns: 1fr !important;
+  }
+}
 
 
   </style>
