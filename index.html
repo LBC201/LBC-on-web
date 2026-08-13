@@ -1386,6 +1386,97 @@
     }
 
 
+        /* ========== MOBILE LAYOUT FIX ========== */
+    @media (max-width: 900px) {
+
+    /* Turn sidebar into a simple top bar */
+    .sidebar {
+        position: relative !important;
+        width: 100% !important;
+        min-height: auto !important;
+        height: auto !important;
+        border-right: none !important;
+        border-bottom: 1px solid var(--border);
+        padding: 16px 20px !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+    }
+
+    .logo {
+        margin-bottom: 0 !important;
+        padding: 0 !important;
+    }
+
+    .logo img {
+        width: 70px !important;
+    }
+
+    .profile-card,
+    .nav,
+    .social,
+    .status {
+        display: none !important;
+    }
+
+    /* Main content takes full width */
+    .main {
+        margin-left: 0 !important;
+        width: 100% !important;
+    }
+
+    section {
+        padding: 40px 20px !important;
+        min-height: auto !important;
+    }
+
+    /* Hero becomes single column */
+    .hero {
+        grid-template-columns: 1fr !important;
+        gap: 30px !important;
+        text-align: center;
+    }
+
+    .graphic-wrap {
+        height: 260px !important;
+        order: -1;
+    }
+
+    .logo-hero {
+        width: 220px !important;
+        height: 220px !important;
+        margin: 0 auto;
+    }
+
+    .logo-hero img {
+        max-width: 200px !important;
+    }
+
+    .lbc-watermark {
+        font-size: 90px !important;
+        letter-spacing: -4px !important;
+    }
+
+    .headline {
+        font-size: 34px !important;
+    }
+
+    .desc {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .actions {
+        justify-content: center;
+    }
+
+    .graphic-label,
+    .graphic-caption {
+        display: none;
+    }
+    }
+
+
   </style>
 </head>
 <body>
