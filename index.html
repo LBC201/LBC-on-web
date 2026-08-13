@@ -1297,6 +1297,94 @@
     }
     }
 
+        /* Payment methods as buttons */
+    .pay-method {
+    padding: 8px 14px;
+    border: 1px solid #333;
+    border-radius: 6px;
+    font-size: 13px;
+    color: #ccc;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: inherit;
+    }
+
+    .pay-method:hover,
+    .pay-method.active {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: rgba(0, 102, 179, 0.08);
+    }
+
+    /* Bank details panel */
+    .bank-details {
+    margin-top: 20px;
+    padding: 20px;
+    background: #0a0a0a;
+    border: 1px solid #2a2a2a;
+    border-radius: 8px;
+    animation: fadeIn 0.25s ease;
+    }
+
+    @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-6px); }
+    to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .bank-details-title {
+    font-size: 14px;
+    font-weight: 500;
+    color: #eee;
+    margin-bottom: 16px;
+    }
+
+    .bank-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+    }
+
+    .bank-label {
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: var(--muted);
+    min-width: 110px;
+    }
+
+    .bank-value {
+    font-size: 15px;
+    color: #f0f0f0;
+    font-family: 'Inter', monospace;
+    letter-spacing: 0.5px;
+    }
+
+    .copy-btn {
+    padding: 4px 10px;
+    font-size: 12px;
+    background: transparent;
+    border: 1px solid #333;
+    border-radius: 4px;
+    color: var(--muted);
+    cursor: pointer;
+    transition: all 0.2s;
+    }
+
+    .copy-btn:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    }
+
+    .bank-note {
+    margin-top: 16px;
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.5;
+    }
+
 
   </style>
 </head>
@@ -1737,16 +1825,44 @@
       </form>
 
       <div class="payment-box">
-        <div class="payment-title">Payment options</div>
-        <div class="payment-methods">
-          <span class="pay-method">Bank transfer</span>
-          <span class="pay-method">Card (online link)</span>
-          <span class="pay-method">Cash at session</span>
-        </div>
-        <p class="payment-info">
-          Once your application is reviewed you’ll receive secure payment instructions. Places are confirmed after payment is received. For queries contact the club secretary.
-        </p>
-      </div>
+  <div class="payment-title">Payment options</div>
+  
+  <div class="payment-methods">
+    <button type="button" class="pay-method" id="btnBankTransfer">Bank transfer</button>
+    <span class="pay-method">Card (online link)</span>
+    <span class="pay-method">Cash at session</span>
+  </div>
+
+  <!-- Bank details (hidden by default) -->
+  <div class="bank-details" id="bankDetails" style="display: none;">
+    <div class="bank-details-title">Bank Transfer Details</div>
+    
+    <div class="bank-row">
+      <span class="bank-label">Account Name</span>
+      <span class="bank-value">Loughrea Badminton Club</span>
+    </div>
+    
+    <div class="bank-row">
+      <span class="bank-label">IBAN</span>
+      <span class="bank-value" id="ibanValue">IE00 AIBK 0000 0000 0000 00</span>
+      <button type="button" class="copy-btn" onclick="copyText('ibanValue')">Copy</button>
+    </div>
+    
+    <div class="bank-row">
+      <span class="bank-label">BIC</span>
+      <span class="bank-value" id="bicValue">AIBKIE2D</span>
+      <button type="button" class="copy-btn" onclick="copyText('bicValue')">Copy</button>
+    </div>
+
+    <p class="bank-note">
+      Please use your <strong>full name</strong> as the payment reference so we can match your payment to your application.
+    </p>
+  </div>
+
+  <p class="payment-info">
+    Once your application is reviewed you’ll receive secure payment instructions. Places are confirmed after payment is received. For queries contact the club secretary.
+  </p>
+</div>
     </div>
 
     <!-- Logos beside the form -->
@@ -1800,6 +1916,37 @@
       });
     });
   </script>
+
+  <script>
+  // Toggle bank details
+  document.getElementById('btnBankTransfer').addEventListener('click', function() {
+    const panel = document.getElementById('bankDetails');
+    const btn = this;
+
+    if (panel.style.display === 'none' || panel.style.display === '') {
+      panel.style.display = 'block';
+      btn.classList.add('active');
+    } else {
+      panel.style.display = 'none';
+      btn.classList.remove('active');
+    }
+  });
+
+  // Copy to clipboard
+  function copyText(elementId) {
+    const text = document.getElementById(elementId).textContent;
+    navigator.clipboard.writeText(text).then(function() {
+      // Optional: show a tiny confirmation
+      const btn = event.target;
+      const original = btn.textContent;
+      btn.textContent = 'Copied!';
+      setTimeout(function() {
+        btn.textContent = original;
+      }, 1500);
+    });
+  }
+</script>
+
 </section>
 
     <!-- 06 CONTACT -->
