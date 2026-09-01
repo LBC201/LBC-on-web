@@ -1243,36 +1243,45 @@
     }
 
     .membership-logos {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 28px;
-    padding-top: 12px;
-    flex-shrink: 0;
-    }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding-top: 20px;
+  min-width: 220px;
+}
 
-    .partner-label {
-    font-size: 11px;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    color: var(--muted);
-    margin-bottom: 4px;
-    }
+.partner-label {
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 8px;
+  text-align: center;
+}
 
-    .partner-logo {
-    max-width: 180px;
-    height: auto;
-    display: block;
-    }
+.logo-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
 
-    .yonex-logo {
-    max-width: 200px;
-    }
+.partner-logo {
+  height: 70px;          /* bigger */
+  width: auto;
+  max-width: 160px;
+  object-fit: contain;
+  opacity: 0.95;
+  transition: opacity 0.2s, transform 0.2s;
+}
 
-    .bird-logo {
-    max-width: 110px;
-    filter: drop-shadow(0 0 12px rgba(0, 102, 179, 0.25));
-    }
+.partner-logo:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
 
     /* Responsive – stack on smaller screens */
     @media (max-width: 900px) {
@@ -1969,7 +1978,7 @@
     <span class="pay-method">Cash at session</span>
   </div>
 
-  <!-- Bank details (hidden by default) -->
+  <!-- Single bank details panel -->
   <div class="bank-details" id="bankDetails" style="display: none;">
     <div class="bank-details-title">Bank Transfer Details</div>
     
@@ -1986,7 +1995,7 @@
     
     <div class="bank-row">
       <span class="bank-label">BIC</span>
-      <span class="bank-value" id="bicValue">AIBKIE2D</span>
+      <span class="bank-value" id="bicValue">AIBKIE2D</span>  <!-- confirm this is correct -->
       <button type="button" class="copy-btn" onclick="copyText('bicValue')">Copy</button>
     </div>
 
@@ -1994,7 +2003,6 @@
       Please use your <strong>full name</strong> as the payment reference so we can match your payment to your application.
     </p>
 
-    <!-- Bank logos -->
     <div class="bank-logos">
       <img src="credit-union-logo.png" alt="Credit Union" class="bank-logo">
       <img src="Allied_Irish_Banks_logo.svg" alt="Allied Irish Banks" class="bank-logo">
@@ -2002,36 +2010,8 @@
     </div>
   </div>
 
-
-</div>
-  <!-- Bank details (hidden by default) -->
-  <div class="bank-details" id="bankDetails" style="display: none;">
-    <div class="bank-details-title">Bank Transfer Details</div>
-    
-    <div class="bank-row">
-      <span class="bank-label">Account Name</span>
-      <span class="bank-value">Loughrea Badminton Club</span>
-    </div>
-    
-    <div class="bank-row">
-      <span class="bank-label">IBAN</span>
-      <span class="bank-value" id="ibanValue">IE00 AIBK 0000 0000 0000 00</span>
-      <button type="button" class="copy-btn" onclick="copyText('ibanValue')">Copy</button>
-    </div>
-    
-    <div class="bank-row">
-      <span class="bank-label">BIC</span>
-      <span class="bank-value" id="bicValue">AIBKIE2D</span>
-      <button type="button" class="copy-btn" onclick="copyText('bicValue')">Copy</button>
-    </div>
-
-    <p class="bank-note">
-      Please use your <strong>full name</strong> as the payment reference so we can match your payment to your application.
-    </p>
-  </div>
-
   <p class="payment-info">
-    Once your application is reviewed you’ll receive secure payment instructions. Places are confirmed after payment is received. For queries contact the club secretary.
+    Places are confirmed after payment is received. Students must email proof of college/university status. For queries contact the club secretary.
   </p>
 </div>
     </div>
@@ -2199,7 +2179,7 @@
 </div>
 
 <!-- Optional: Map button / embed -->
-<a href="https://maps.google.com/?q=YOUR_EIRCODE_HERE" 
+<a href="https://maps.google.com/?q=5CWJ+RC" 
    target="_blank" 
    rel="noopener" 
    class="contact-item">
